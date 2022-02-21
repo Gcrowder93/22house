@@ -39,14 +39,14 @@ export default function Login() {
         <br></br> password: <i>password</i>
       </h5>
       <form onSubmit={handleLogin} className={styles.loginForm}>
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
           id="email"
           name="email"
           type="email"
           onChange={(e) => handleFormChange(e)}
         />{' '}
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <input
           id="password"
           name="password"
