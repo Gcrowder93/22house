@@ -6,6 +6,17 @@ exports[`should allow the user to log in 1`] = `
     You must log in to view the page at 
     /
   </h3>
+  <h5>
+    email: 
+    <i>
+      gcrowder93@gmail.com
+    </i>
+    <br />
+     password: 
+    <i>
+      password
+    </i>
+  </h5>
   <form
     class="loginForm"
   >
@@ -18,7 +29,6 @@ exports[`should allow the user to log in 1`] = `
       id="email"
       name="email"
       type="email"
-      value=""
     />
      
     <label
@@ -30,7 +40,6 @@ exports[`should allow the user to log in 1`] = `
       id="password"
       name="password"
       type="password"
-      value=""
     />
     <button
       aria-label="Sign In"

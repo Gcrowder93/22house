@@ -18,6 +18,9 @@ export default function Login() {
   const handleLogin = (event) => {
     event.preventDefault();
     const loginWasSuccessful = auth.login(formState.email, formState.password);
+    loginWasSuccessful
+      ? history.replace(from.pathname)
+      : setError('Unsuccessful, try again');
 
     // TODO: If login was unsuccessful, set an error with a message
     // to display to the user that their login failed.
@@ -31,20 +34,26 @@ export default function Login() {
   return (
     <>
       <h3>You must log in to view the page at {from.pathname}</h3>
+      <h5>
+        email: <i>gcrowder93@gmail.com</i>
+        <br></br> password: <i>password</i>
+      </h5>
       <form onSubmit={handleLogin} className={styles.loginForm}>
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
           id="email"
           name="email"
           type="email"
+          onChange={(e) => handleFormChange(e)}
         />{' '}
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <input
           id="password"
           name="password"
           type="password"
+          onChange={(e) => handleFormChange(e)}
         />
-        <button type="submit" aria-label="Sign In">
+        <button onClick={handleLogin} type="submit" aria-label="Sign In">
           Sign in
         </button>
       </form>
