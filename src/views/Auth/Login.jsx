@@ -41,17 +41,17 @@ export default function Login() {
       <form onSubmit={handleLogin} className={styles.loginForm}>
         <label>Email</label>
         <input
-          onChange={(e) => handleFormChange(e)}
           id="email"
           name="email"
           type="email"
+          onChange={(e) => handleFormChange(e)}
         />{' '}
         <label>Password</label>
         <input
-          onChange={(e) => handleFormChange(e)}
           id="password"
           name="password"
           type="password"
+          onChange={(e) => handleFormChange(e)}
         />
         <button onClick={handleLogin} type="submit" aria-label="Sign In">
           Sign in
